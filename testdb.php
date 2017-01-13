@@ -3,13 +3,13 @@ $hostname="localhost";
 $username="root";
 $password="";
 
-$databasename="alpharm";
+$databasename="mydb";
 $dbconnected=mysql_connect($hostname,$username,$password);
 $dbselected=mysql_select_db($databasename,$dbconnected);
 
 $dbsuccess=true;
 
-//or die("could not connect to db" alphacrm);
+//or die("could not connect to db" mydb);
 //connection of db 
 if ($dbconnected)
 {
