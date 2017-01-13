@@ -8,7 +8,7 @@ $hostname="localhost";
 $username="root";
 $password="";
 
-$databasename="alpharm";
+$databasename="mydb";
 $dbconnected=mysql_connect($hostname,$username,$password);
 $dbselected=mysql_select_db($databasename,$dbconnected);
 
@@ -35,10 +35,10 @@ if ($dbconnected)
 //execute only if connection were successful
 		if ($dbsuccess) {
 			# code...
-			$dbName="alphacrm";
-			$create_SQL="DROP DATABASE  ".$dbName;
+			$dbName="mydb";
+			$delete_SQL="DROP DATABASE  ".$dbName;
 
-			if (mysql_query($create_SQL)) {
+			if (mysql_query($delete_SQL)) {
 				# code...
 				echo "'DROP database".$dbName."' - successful.";
 			}
