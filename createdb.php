@@ -6,7 +6,7 @@ $hostname="localhost";
 $username="root";
 $password="";
 
-$databasename="alpharm";
+$databasename="mydb";
 $dbconnected=mysql_connect($hostname,$username,$password);
 $dbselected=mysql_select_db($databasename,$dbconnected);
 
@@ -33,7 +33,7 @@ if ($dbconnected)
 //execute only if connection were successful
 		if ($dbsuccess) {
 			# code...
-			$dbName="alphacrm";
+			$dbName="mydb";
 			$create_SQL="CREATE DATABASE  ".$dbName;
 
 			if (mysql_query($create_SQL)) {
