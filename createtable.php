@@ -12,7 +12,7 @@ $dbconnected=mysql_connect($hostname,$username,$password);
 $dbselected=mysql_select_db($databasename,$dbconnected);
 
 $dbsuccess=true;
-//or die("could not connect to db" alphacrm);
+//or die("could not connect to db" mydb);
 //connection of db 
 if ($dbconnected)
 {
@@ -34,7 +34,7 @@ if ($dbconnected)
 
 
 //execute only is connection were successful
-		//sql script creating table tCompany
+		//sql script creating table Company
 
 	if ($dbsuccess) {
 			# code...
@@ -62,7 +62,7 @@ if ($dbconnected)
 			
 
 
-//sql script create table tPerson
+//sql script create table Person
 
 
 $createPersonTable_SQL = "CREATE TABLE mydb.Person ( ";
