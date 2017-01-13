@@ -12,7 +12,7 @@ $dbselected=mysql_select_db($databasename,$dbconnected);
 
 $dbsuccess=true;
 
-//or die("could not connect to db" alphacrm);
+//or die("could not connect to db" mydb);
 //connection of db 
 if ($dbconnected)
 {
