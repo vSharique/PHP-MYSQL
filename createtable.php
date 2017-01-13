@@ -7,7 +7,7 @@ $hostname="localhost";
 $username="root";
 $password="";
 
-$databasename="alphacrm";
+$databasename="mydb";
 $dbconnected=mysql_connect($hostname,$username,$password);
 $dbselected=mysql_select_db($databasename,$dbconnected);
 
@@ -38,7 +38,7 @@ if ($dbconnected)
 
 	if ($dbsuccess) {
 			# code...
-		$createCoyTable_SQL = "CREATE TABLE alphacrm.tCompany ( ";
+		$createCoyTable_SQL = "CREATE TABLE mydb.Company ( ";
 		$createCoyTable_SQL .= "ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, ";
 		$createCoyTable_SQL .= "preName VARCHAR(50) , ";
 		$createCoyTable_SQL .= "Name VARCHAR(50) NOT NULL , ";
@@ -57,7 +57,7 @@ if ($dbconnected)
 		if (mysql_query($createCoyTable_SQL)) {
 
 			# code...
-			echo "'Create table tCompany' - successful.<br />";
+			echo "'Create table Company' - successful.<br />";
 		}
 			
 
@@ -65,7 +65,7 @@ if ($dbconnected)
 //sql script create table tPerson
 
 
-$createPersonTable_SQL = "CREATE TABLE alphacrm.tPerson ( ";
+$createPersonTable_SQL = "CREATE TABLE mydb.Person ( ";
 $createPersonTable_SQL .= "ID INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, ";
 $createPersonTable_SQL .= "Saluatation VARCHAR(20), " ;
 $createPersonTable_SQL .= "FirstName VARCHAR(50) , ";
@@ -75,7 +75,7 @@ $createPersonTable_SQL .= ")";
 
 if (mysql_query($createPersonTable_SQL)) {
 	# code...
-	echo "'create tble tPerson'- successful.<br />";
+	echo "'create table Person'- successful.<br />";
 }
 
 }
